@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "installed": [
+    {
+      "slug": "sopra-steria-html-presentations",
+      "version": "0.0.0",
+      "assetType": "skill",
+      "installedAt": "2026-10-15T17:47:52.512Z",
+      "agents": [
+        "cursor"
+      ],
+      "files": [
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/README-skill.md",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/SKILL.md",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/assets/Sopra-Steria_logo_RGB_black-color.png",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/assets/Sopra-Steria_logo_RGB_black.png",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/assets/Sopra-Steria_logo_RGB_white.png",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/assets/adaptive-reference.html",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/assets/drilldown-reference.html",
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations/assets/reference-template.html"
+      ],
+      "skillDirs": [
+        "/Users/johan.dahl/repos/johanlrdahl/jev-laya-demo/.cursor/skills/sopra-steria-html-presentations"
+      ],
+      "commandFiles": [],
+      "agentFiles": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[project]
+name = "jev-laya-demo"
+version = "0.1.0"
+description = "Ticket triage race: Laya vs local LLMs"
+readme = "README.md"
+authors = [
+    { name = "Johan L. R. Dahl", email = "johanlrdahl@outlook.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "laya>=0.4.8",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+jev-laya-demo = "jev_laya_demo:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
