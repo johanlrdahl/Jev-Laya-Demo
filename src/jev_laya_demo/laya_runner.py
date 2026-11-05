@@ -20,7 +20,7 @@ def load_router():
     router = Router(device="mps")
     router.preload(["english", "multilingual"])
     # The first forward pass on MPS compiles kernels; pay that before the race.
-    for text in (TICKETS[0].text, TICKETS[14].text):
+    for text in (TICKETS[0].text, TICKETS[7].text):
         router.predict(text, QUESTIONS)
     return router
 

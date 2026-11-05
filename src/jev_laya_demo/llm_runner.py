@@ -4,7 +4,7 @@ import time
 
 import httpx
 
-from .questions import QUESTIONS
+from .questions import NOW_WRITING, QUESTIONS
 from .results import Answer, Lane, TicketResult
 from .tickets import Ticket
 
@@ -92,9 +92,10 @@ def generate(client: httpx.Client, model: str, prompt: str, temperature: float, 
             text += chunk.get("response", "")
             if lane is not None:
                 lane.stream = text
-                lane.output_tokens += 1 if chunk.get("response") else 0
             if chunk.get("done"):
                 final = chunk
+                if lane is not None:
+                    lane.output_tokens += chunk.get("eval_count", 0)
     return text, final.get("prompt_eval_count", 0), final.get("eval_count", 0)
 
 
@@ -110,7 +111,8 @@ def decide(client, model: str, ticket: Ticket, single_call: bool, reason: bool,
     start = time.perf_counter()
     for qids in groups:
         if lane is not None:
-            lane.current = f"{ticket.id} - {', '.join(qids)}"
+            what = NOW_WRITING[qids[0]] if len(qids) == 1 else "alle tre spørsmål"
+            lane.current = f"Sak {ticket.id}: {what}"
         text, i, o = generate(client, model, build_prompt(ticket, qids, reason), temperature, lane)
         answers.update(parse(text, qids))
         tin, tout = tin + i, tout + o

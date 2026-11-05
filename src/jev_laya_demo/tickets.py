@@ -55,9 +55,9 @@ TICKETS = [
     ),
     Ticket(
         "T08",
-        "Payments from our webshop are failing at checkout right now. Customers see "
-        "'payment declined' for every card. We are losing sales by the minute.",
-        "technical", 3, False,
+        "Jeg ble trukket to ganger for abonnementet denne måneden. "
+        "Kan dere betale tilbake det ene beløpet?",
+        "billing", 1, True, tricky=True,
     ),
     Ticket(
         "T09",
@@ -94,9 +94,9 @@ TICKETS = [
     ),
     Ticket(
         "T15",
-        "Jeg ble trukket to ganger for abonnementet denne måneden. "
-        "Kan dere betale tilbake det ene beløpet?",
-        "billing", 1, True, tricky=True,
+        "Payments from our webshop are failing at checkout right now. Customers see "
+        "'payment declined' for every card. We are losing sales by the minute.",
+        "technical", 3, False,
     ),
     Ticket(
         "T16",

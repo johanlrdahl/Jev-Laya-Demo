@@ -38,6 +38,7 @@ class Lane:
 
     name: str
     total: int
+    role: str = ""
     is_laya: bool = False
     status: str = "waiting"
     done: int = 0
