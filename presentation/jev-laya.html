@@ -201,18 +201,23 @@
         .card:nth-child(3) .step-num { background: linear-gradient(135deg, var(--ss-orange), #f5a623); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
         /* TRENING */
-        .train-grid { display: grid; grid-template-columns: 120px 1.3fr 1fr 1fr; gap: 0.45em; margin-top: 0.3em; }
+        .train-grid { display: grid; grid-template-columns: 135px 1fr 1fr; gap: 0.45em; margin-top: 0.3em; }
         .train-head { font-size: 0.42em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ss-grey); padding: 0 0.3em; }
-        .train-head b { display: block; font-size: 1.5em; color: var(--ss-purple); letter-spacing: 0; text-transform: none; }
+        .train-head b { display: block; font-size: 1.45em; color: var(--ss-purple); letter-spacing: 0; text-transform: none; }
         .train-row { font-size: 0.5em; font-weight: bold; color: var(--ss-purple); display: flex; flex-direction: column; justify-content: center; }
         .train-row.teal { color: var(--ss-teal); }
         .train-row small { font-size: 0.75em; font-weight: normal; color: var(--ss-grey); margin-top: 0.2em; }
-        .tcell { background: #fff; border-radius: 14px; padding: 0.45em 0.7em; box-shadow: 0 4px 20px rgba(77,29,130,0.07); }
-        .tcell h4 { font-size: 0.52em; margin: 0 0 0.3em; color: var(--ss-purple); }
+        .tcell { background: #fff; border-radius: 14px; padding: 0.5em 0.8em; box-shadow: 0 4px 20px rgba(77,29,130,0.07); }
+        .tcell h4 { font-size: 0.54em; margin: 0 0 0.3em; color: var(--ss-purple); }
         .tcell.teal h4 { color: var(--ss-teal); }
-        .tcell p { font-size: 0.42em; line-height: 1.45; color: #555; margin: 0.35em 0 0; }
-        .tcell .tok-row { flex-wrap: nowrap; gap: 4px; }
-        .tcell .tok { font-size: 0.37em; padding: 3px 6px; }
+        .tcell p { font-size: 0.44em; line-height: 1.45; color: #555; margin: 0.3em 0 0; }
+        .tcell .tok-row { flex-wrap: nowrap; gap: 5px; }
+        .tcell .tok { font-size: 0.4em; padding: 4px 8px; }
+        .restart-btn { display: inline-flex; align-items: center; gap: 0.4em; margin-top: 1.1em; padding: 0.45em 1.1em;
+                       border-radius: 999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3);
+                       color: #fff !important; font-size: 0.42em; font-weight: bold; text-decoration: none;
+                       letter-spacing: 0.04em; transition: background 0.2s, transform 0.2s; }
+        .restart-btn:hover { background: var(--ss-orange); border-color: var(--ss-orange); transform: translateY(-2px); }
         .tok.blank { background: #fff; border: 2px dashed var(--ss-orange); color: var(--ss-orange); }
         .calib { display: grid; grid-template-columns: 1fr 1.05fr; gap: 1em; align-items: center; }
         .calib .col-card p { font-size: 0.5em; line-height: 1.5; color: #444; margin: 0 0 0.7em; }
@@ -270,7 +275,7 @@
         <svg class="deco" style="bottom:-220px; left:-220px; opacity:0.04;" width="440" height="440" viewBox="0 0 440 440"><circle cx="220" cy="220" r="220" fill="#8B1D82"/></svg>
         <div class="slide-content">
             <h2>To måter å tenke på: System 1 og System 2</h2>
-            <p class="lead"><strong>Rekk opp hånda</strong> hvis du har brukt ChatGPT bare for å få et «ja» eller «nei». Psykologen Daniel Kahneman delte tenkningen vår i to, og akkurat samme skille har nå kommet til AI.</p>
+            <p class="lead"><strong>Rekk opp hånda</strong> hvis du har brukt ChatGPT bare for å få et «ja» eller «nei».<br>Psykologen Daniel Kahneman delte tenkningen vår i to, og akkurat samme skille har nå kommet til AI.</p>
             <div class="two-col">
                 <div class="col-card teal fragment fade-up">
                     <div class="kicker">System 1 &middot; raskt &middot; intuitivt</div>
@@ -293,20 +298,53 @@
                     </ul>
                 </div>
             </div>
-            <p class="punch fragment fade-up"><strong>Et valg er ikke en stiloppgave.</strong> Likevel setter vi i dag System 2 til nesten alt, også alle småvalgene som egentlig er System 1.</p>
+            <p class="punch fragment fade-up"><strong>Et valg er ikke en stiloppgave.</strong><br>Likevel setter vi i dag System 2 til nesten alt, også alle småvalgene som egentlig er System 1.</p>
         </div>
         <aside class="notes">
-            (1,5 min) Start med håndsopprekningen og kommenter kort: de fleste har det. Spør så: hva er 2 + 2? Alle vet det umiddelbart. Hva er 17 ganger 24? Da må du tenke. Det er System 1 og System 2, fra Kahnemans «Thinking, Fast and Slow».
-            I programvare er det samme: veldig mange AI-kall er egentlig raske valg. Hvilken avdeling? Haster det? Er dette trygt? Likevel spør vi en språkmodell, som må skrive seg frem til svaret ord for ord.
-            Bildet fra invitasjonen: det er som å sette Jon Fosse ved samlebåndet på postterminalen. Han skriver et langsomt drama om pakkens lengsel før han legger den på riktig bånd. Jev og Laya legger bare pakken på riktig bånd.
+            (1,5 min) Start med håndsopprekningen og kommenter kort: de fleste har det. Spør så: hva er 2 + 2? Alle vet det umiddelbart. Hva er 17 ganger 24? Da må du tenke. Det er System 1 og System 2, fra Daniel Kahnemans bok «Thinking, Fast and Slow».
+            Kort om Kahneman: han var psykolog, men fikk Nobelprisen i økonomi i 2002 (for arbeidet han gjorde sammen med Amos Tversky). De grunnla atferdsøkonomien ved å vise at mennesker ikke er kalde, rasjonelle kalkulatorer: vi tar de fleste valg lynraskt på magefølelse og tommelfingerregler (System 1), og kobler bare inn den tunge, logiske tenkningen (System 2) når vi må.
+            I programvare har vi gjort det motsatte: veldig mange AI-kall er egentlig raske System 1-valg (hvilken avdeling, haster det, er dette trygt?), men vi sender dem likevel til en stor språkmodell som må skrive seg frem til svaret ord for ord.
         </aside>
     </section>
 
-    <!-- 3. MØT JEV OG LAYA + DEMO-OPPSETT -->
+    <!-- 3. HVORDAN JEV OG LAYA DUKKET OPP -->
+    <section data-background-color="#EDE9F2">
+        <div class="slide-content">
+            <h2>To modeller på tre dager: Jev og Laya</h2>
+            <p class="lead">Høsten 2026 fikk System 1-modeller sitt gjennombrudd, først som lukket skytjeneste og tre dager senere som åpen kildekode.</p>
+            <div class="two-col" style="margin-top:0.3em;">
+                <div class="col-card fragment fade-up">
+                    <div class="kicker">15. september 2026 &middot; TypeSafe AI (San Francisco)</div>
+                    <h3><span class="icon-sm bg-purple"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Jev: gnisten</h3>
+                    <ul>
+                        <li>Lansert etter to år i det stille av Diogo Almeida (tidligere ChatGPT-forsker hos OpenAI)</li>
+                        <li>Introduserte begrepet <strong>System One model</strong> og svartypene <em>Choice</em>, <em>Score</em> og <em>Noul</em></li>
+                        <li>Lukket sky-API til $0,042 per million input-tokens, $0 for output</li>
+                    </ul>
+                </div>
+                <div class="col-card teal fragment fade-up">
+                    <div class="kicker">18. september 2026 &middot; ConvAI Innovations (Kerala, India)</div>
+                    <h3><span class="icon-sm bg-teal"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11.5 14.5 16 10"/></svg></span>Laya: det åpne svaret</h3>
+                    <ul>
+                        <li>Nandakishor Mukkunnoth hadde forsket på samme idé i 2025 og bygget <strong>Laya</strong> på en 15-timers sprint etter Jev-lanseringen</li>
+                        <li><em>Laya</em> betyr «rytme» og «oppløsning» på sanskrit</li>
+                        <li>Åpen kildekode (Apache 2.0), samme API-format som Jev, kjører lokalt og toppet Hugging Face</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="source">Kilder: TypeSafe AI lanseringsblogg (15. sep. 2026), ConvAI Innovations / Analytics India Magazine (sep. 2026).</p>
+        </div>
+        <aside class="notes">
+            (1,5 min) Kort om hvor ferskt dette er. 15. september 2026 kom TypeSafe AI ut av stealth med Jev. Gründeren Diogo Almeida var med å lage RLHF-metodene bak ChatGPT hos OpenAI, men mente at tekstgenerering var feil grensesnitt for automatisering i kode.
+            Tre dager senere, 18. september, kom svaret fra India: Nandakishor Mukkunnoth i ConvAI Innovations hadde publisert en forskningsartikkel om nesten samme idé våren 2025. Da Jev tok av, hev han seg rundt i en 15-timers maratonsprint og slapp Laya som åpen kildekode med nøyaktig samme API-format som Jev. Navnet Laya er sanskrit for rytme eller puls i musikk, og det at alt overflødig forsvinner. Den gikk rett til topps som mest trendende modell på Hugging Face, og det er den som kjører på laptopen min i dag.
+        </aside>
+    </section>
+
+    <!-- 4. DEMO-OPPSETT -->
     <section data-background-color="#FDF2E5">
         <div class="slide-content">
-            <h2>Møt Jev og Laya, og kappløpet dere skal se</h2>
-            <p class="lead"><strong>Jev</strong> er en skytjeneste fra TypeSafe AI, <strong>Laya</strong> en åpen variant som kjører på denne laptopen. Du gir dem svaralternativene på forhånd. De velger ett, og sier hvor sikre de er.</p>
+            <h2>Tre svartyper, og kappløpet dere skal se</h2>
+            <p class="lead">Du gir modellen svaralternativene på forhånd. Den velger ett, og sier hvor sikker den er.</p>
             <div class="card-grid">
                 <div class="card fragment fade-up">
                     <h3>Choice: velg ett</h3>
@@ -334,7 +372,7 @@
         </aside>
     </section>
 
-    <!-- 4. HVA SKJEDDE? -->
+    <!-- 5. HVA SKJEDDE? -->
     <section data-background-color="#EDE9F2" data-counters>
         <svg class="deco" style="top:-200px; right:-200px; opacity:0.05;" width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200" r="200" fill="#4D1D82"/></svg>
         <div class="slide-content">
@@ -372,7 +410,7 @@
         </aside>
     </section>
 
-    <!-- 5. HVORFOR ER SKRIVING DYRT? -->
+    <!-- 6. HVORFOR ER SKRIVING DYRT? -->
     <section data-background-color="#FDF2E5">
         <div class="slide-content">
             <h2>Hvorfor er det så tregt og dyrt å skrive?</h2>
@@ -409,7 +447,7 @@
         </aside>
     </section>
 
-    <!-- 6. UNDER PANSERET -->
+    <!-- 7. UNDER PANSERET -->
     <section>
         <div class="slide-content">
             <h2>Under panseret: lik grunnmur, annen jobb</h2>
@@ -446,60 +484,52 @@
         </aside>
     </section>
 
-    <!-- 7. TRENING: PRE-TRAINING VS POST-TRAINING -->
+    <!-- 8. TRENING: PRE-TRAINING VS POST-TRAINING -->
     <section data-background-color="#FDF2E5">
         <div class="slide-content">
             <h2>Samme grunnskole, ulik etterutdanning</h2>
-            <p class="lead">Begge lærer språk av billioner av ord. Forskjellen er hva de øver på, og hva de belønnes for.</p>
+            <p class="lead">Begge lærer språk av billioner av ord. Forskjellen er hva de øver på i grunnskolen, og hva de trenes til etterpå.</p>
             <div class="train-grid">
                 <div></div>
-                <div class="train-head">Steg 1 &middot; pre-training<b>Grunnskole</b></div>
-                <div class="train-head fragment fade-up" data-fragment-index="2">Steg 2 &middot; post-training<b>Etterutdanning</b></div>
-                <div class="train-head fragment fade-up" data-fragment-index="3">Steg 3 &middot; på egne data<b>Spesialisering</b></div>
+                <div class="train-head">Steg 1 &middot; pre-training<b>Grunnskole: lære språk</b></div>
+                <div class="train-head fragment fade-up" data-fragment-index="2">Steg 2 &middot; post-training<b>Etterutdanning: lære jobben</b></div>
 
                 <div class="train-row">Språkmodell<small>Mistral, Gemma, GPT</small></div>
                 <div class="tcell fragment fade-up" data-fragment-index="0">
                     <h4>Gjett neste ord</h4>
                     <div class="tok-row"><span class="tok">Kunden</span><span class="tok">vil</span><span class="tok">ha</span><span class="tok">pengene</span><span class="tok blank">___</span></div>
-                    <p>Ser bare det som står før, og lærer å skrive videre.</p>
+                    <p>Ser bare det som står før, og lærer å skrive videre ord for ord.</p>
                 </div>
                 <div class="tcell fragment fade-up" data-fragment-index="2">
-                    <h4>Skriv svar folk liker</h4>
-                    <p>RLHF: belønnes når mennesker liker svaret.</p>
-                    <p><strong>Lærer å høres overbevisende ut.</strong></p>
-                </div>
-                <div class="tcell fragment fade-up" data-fragment-index="3">
-                    <h4>Bedre prompter</h4>
-                    <p>Instruksjoner og eksempler i hver forespørsel. Svaret er fortsatt tekst.</p>
+                    <h4>Skriv svar folk liker (RLHF)</h4>
+                    <p>Belønnes når mennesker foretrekker svaret, eller når en fasit kan sjekkes.</p>
+                    <p><strong>Lærer å høres hjelpsom og overbevisende ut.</strong></p>
                 </div>
 
                 <div class="train-row teal">Laya<small>Jev: ikke publisert</small></div>
                 <div class="tcell teal fragment fade-up" data-fragment-index="1">
                     <h4>Fyll inn hullet</h4>
                     <div class="tok-row"><span class="tok">Kunden</span><span class="tok">vil</span><span class="tok blank">___</span><span class="tok">pengene</span><span class="tok">tilbake</span></div>
-                    <p>Ser hele teksten. 2&ndash;3 billioner ord, opptil 1 833 språk.</p>
+                    <p>Ser hele setningen samtidig. Trent på 2&ndash;3 billioner ord i opptil 1 833 språk.</p>
                 </div>
                 <div class="tcell teal fragment fade-up" data-fragment-index="2">
-                    <h4>Vær ærlig om tvil</h4>
-                    <p>RLCD: belønnes når sannsynlighetene stemmer med virkeligheten.</p>
-                    <p><strong>Lærer å vite når den er usikker.</strong></p>
-                </div>
-                <div class="tcell teal fragment fade-up" data-fragment-index="3">
-                    <h4>Finjuster på egne valg</h4>
-                    <p>Det er her treffsikkerheten sitter: fra 36 % til 77 % riktig i Layas egen test.</p>
+                    <h4>Vær ærlig om tvil (RLCD)</h4>
+                    <p>Får et beslutningshode som scorer alternativene, og belønnes når sannsynlighetene stemmer med virkeligheten.</p>
+                    <p><strong>Finjustert på egne data øker treffsikkerheten fra 36 % til 77 %.</strong></p>
                 </div>
             </div>
             <p class="source">Kilder: Layas modellkort (Hugging Face), TypeSafes lanseringsinnlegg. TypeSafe har ikke publisert Jevs arkitektur, treningsdata eller RLCD-oppskrift.</p>
         </div>
         <aside class="notes">
-            (2 min) Lek med salen. Første fragment: «Kunden vil ha pengene …», hva er neste ord? (tilbake.) Slik trenes en språkmodell: gjett neste ord, milliarder av ganger. Neste fragment: «Kunden vil … pengene tilbake», hva mangler? (ha / få.) Slik trenes grunnmodellen til Laya: fyll inn hullet, med hele setningen synlig. Begge lærer språk av billioner av ord, men den ene lærer å fortsette tekst, den andre å forstå den.
-            Steg 2 er der veiene skilles. Språkmodeller finpusses med RLHF (Reinforcement Learning from Human Feedback): mennesker vurderer svarene, og modellen lærer å skrive det vi liker. Det gir hjelpsomme, overbevisende svar, men ikke nødvendigvis ærlighet om usikkerhet. Laya får et nytt beslutningshode og trenes med RLCD (Reinforcement Learning for Calibrated Decisions): belønningen er størst når sannsynligheten modellen oppgir stemmer med hvor ofte den faktisk har rett.
-            Steg 3: grunnmodellen er et utgangspunkt. Finjustert på egne beslutninger dobles treffsikkerheten i Layas egen test.
-            Ærlighet: Jev bruker samme idé, men TypeSafe har ikke publisert hvordan. Laya er én åpen tolkning.
+            (2 min) To steg: først grunnskolen (pre-training), der modellen lærer språk fra rå tekst. Deretter etterutdanningen (post-training), der den trenes til selve jobben den skal gjøre.
+            Lek med salen i steg 1. Første fragment: «Kunden vil ha pengene …», hva er neste ord? (tilbake.) Slik trenes en språkmodell: gjett neste ord, milliarder av ganger. Neste fragment: «Kunden vil … pengene tilbake», hva mangler? (ha / få.) Slik trenes grunnmodellen til Laya (ModernBERT og mmBERT): fyll inn hullet, med hele setningen synlig. Den ene lærer å fortsette tekst, den andre å forstå sammenhengen.
+            Steg 2 er etterutdanningen, og det er her veiene virkelig skilles. Språkmodeller finpusses med RLHF (Reinforcement Learning from Human Feedback): mennesker vurderer svarene, og modellen lærer å skrive det vi liker. Det gir overbevisende svar, men modellen lærer ikke å si fra når den er usikker.
+            Laya bygges om: den får et eget beslutningshode på toppen og trenes med RLCD (Reinforcement Learning for Calibrated Decisions). Her får modellen størst belønning når sannsynligheten den oppgir faktisk stemmer med hvor ofte den har rett. Og finjusterer du den videre på dine egne saker, hopper treffsikkerheten i Layas test fra 36 % til 77 %.
+            Ærlighet: Jev bruker samme hovedidé, men TypeSafe har ikke publisert hvordan. Laya er én åpen tolkning.
         </aside>
     </section>
 
-    <!-- 8. KALIBRERING -->
+    <!-- 9. KALIBRERING -->
     <section>
         <div class="slide-content">
             <h2>Hva vil det si at modellen er ærlig om tvil?</h2>
@@ -542,11 +572,46 @@
             (1,5 min) Hva betyr «ærlige sannsynligheter»? Tenk på en værmelder: sier hun 70 % regn, skal det regne omtrent 70 av 100 slike dager. Den stiplede linjen er en perfekt ærlig modell.
             Treningen er et veddemål med regler som gjør det umulig å jukse: å overdrive sikkerheten straffes, å være for forsiktig koster også. Den eneste vinnerstrategien er å si det du faktisk tror. Teknisk heter det en «strengt proper scoring rule».
             Rød linje: modeller som ChatGPT sier ofte 90 % når de har rett langt sjeldnere. Det er også slik Laya kommer ut av treningen. Grønn linje: etter en enkel justering på data som ligner bruken.
-            Hvorfor bry seg? Bare ærlige sannsynligheter kan brukes til å bestemme når maskinen skal handle selv, og når et menneske skal se på saken. Det kommer vi til om to slides, når vi ser inni en agent.
+            Hvorfor bry seg? Bare ærlige sannsynligheter kan brukes til å bestemme når maskinen skal handle selv, og når et menneske skal se på saken. Det kommer vi til når vi ser inni en agent.
         </aside>
     </section>
 
-    <!-- 9. JEVONS -->
+    <!-- 10. PROMPT OG KONTEKST -->
+    <section data-background-color="#FDF2E5">
+        <div class="slide-content">
+            <h2>Prompt og kontekst: likt og nytt</h2>
+            <p class="lead">Du styrer fortsatt modellen med vanlig språk, men du beskriver <em>valgene</em> i stedet for å be om et format.</p>
+            <div class="two-col" style="margin-top:0.3em;">
+                <div class="col-card fragment fade-up">
+                    <div class="kicker">Som med en vanlig LLM</div>
+                    <h3><span class="icon-sm bg-purple"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>Det som er likt</h3>
+                    <ul>
+                        <li><strong>Vanlig språk:</strong> nye kategorier og regler sendes med i hvert kall</li>
+                        <li><strong>Ordvalg teller:</strong> tydelige beskrivelser av hvert alternativ gir bedre treff</li>
+                        <li><strong>Ryddig kontekst:</strong> send relevante felter, ikke rå støy</li>
+                    </ul>
+                </div>
+                <div class="col-card teal fragment fade-up">
+                    <div class="kicker">Spesielt for Jev og Laya</div>
+                    <h3><span class="icon-sm bg-teal"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Det som er annerledes</h3>
+                    <ul>
+                        <li><strong>Null format-mas:</strong> ingen «svar KUN med JSON», skjemaet ligger i kallet</li>
+                        <li><strong>Kort kontekst:</strong> Laya leser 512&ndash;1 024 tokens (Jev 64k), send kun det valget krever</li>
+                        <li><strong>Når ord ikke er nok:</strong> Laya må finjusteres hvis den ikke kan domenet</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="punch fragment fade-up">Fra demoen vår: <code>"billing": "Invoices, charges, refunds, subscription cancellation, address on invoices"</code></p>
+        </div>
+        <aside class="notes">
+            (1,5 min) Hvordan er det å jobbe med Jev og Laya i praksis sammenlignet med vanlig prompt engineering?
+            Mye er likt: du skriver fortsatt instruksjoner på vanlig språk, og du kan legge til eller endre kategorier på sekundet uten å trene modellen på nytt. Da vi lagde demoen, så vi at presise beskrivelser av hva som hører hjemme i hver avdeling løftet treffsikkerheten mange prosentpoeng. For eksempel måtte vi skrive eksplisitt at adresseendring på faktura hører til fakturering.
+            Det som er nytt: du bruker null krefter på å tvinge modellen til å svare i riktig format. Ingen «tenk steg for steg og svar kun med gyldig JSON». Og på kontekstsiden vil du sende en kort, strukturert tilstand (state) med bare det som trengs for beslutningen, særlig med Laya som bare leser noen hundre ord.
+            Og hvis gode formuleringer ikke er nok fordi domenet ditt er spesielt: med Laya finjusterer du modellen på egne eksempler. Med Jev i skyen har du ikke tilgang til vektene, så der styrer du kun gjennom konteksten og beskrivelsene av valgene.
+        </aside>
+    </section>
+
+    <!-- 11. JEVONS -->
     <section data-background-color="#EDE9F2">
         <div class="slide-content">
             <h2>Hvorfor «Jev»? Jevons paradoks</h2>
@@ -596,7 +661,7 @@
         </aside>
     </section>
 
-    <!-- 10. INNI EN AI-AGENT -->
+    <!-- 12. INNI EN AI-AGENT -->
     <section data-background-color="#FDF2E5">
         <div class="slide-content">
             <h2>Inni en AI-agent: der Jev og Laya hjelper</h2>
@@ -674,7 +739,7 @@
         </aside>
     </section>
 
-    <!-- 11. BEGRENSNINGER + TAKEAWAYS -->
+    <!-- 13. BEGRENSNINGER + TAKEAWAYS -->
     <section data-background-color="#EDE9F2">
         <svg class="deco" style="top:-200px; left:-200px; opacity:0.05;" width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200" r="200" fill="#8B1D82"/></svg>
         <div class="slide-content">
@@ -709,7 +774,7 @@
         </aside>
     </section>
 
-    <!-- 12. AVSLUTNING -->
+    <!-- 14. AVSLUTNING -->
     <section data-background="linear-gradient(135deg, #2A1449 0%, #4D1D82 60%, #8B1D82 100%)" data-transition="fade">
         <div class="orb" style="width:460px;height:460px;left:50%;top:-260px;margin-left:-230px;background:rgba(0,150,136,0.3);"></div>
         <div class="orb" style="width:340px;height:340px;right:-160px;bottom:-180px;background:rgba(240,125,0,0.25);animation-delay:-3s;"></div>
@@ -733,8 +798,9 @@
                     <a href="https://typesafe.ai">typesafe.ai</a> &middot; <a href="https://huggingface.co/convaiinnovations/laya">huggingface.co/convaiinnovations/laya</a>
                 </p>
             </div>
-            <p class="logo-text" style="margin-top:1.2em;"><span class="gradient-text" style="font-size:1.6em; letter-spacing:0.02em; text-transform:none;">The world is how we shape it.</span></p>
+            <p class="logo-text" style="margin-top:1.1em;"><span class="gradient-text" style="font-size:1.6em; letter-spacing:0.02em; text-transform:none;">The world is how we shape it.</span></p>
             <p class="logo-text">&copy; 2026 Sopra Steria</p>
+            <a href="#/0" class="restart-btn" onclick="Reveal.slide(0); return false;">&#8634; Tilbake til første slide</a>
         </div>
         <aside class="notes">
             (30 s) Takk! Skann QR-koden for presentasjonen og demoen. Har noen en kundehenvendelse de vil teste live? Jeg kan kjøre den gjennom Laya nå.
